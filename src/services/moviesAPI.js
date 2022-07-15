@@ -1,11 +1,12 @@
 import axios from 'axios';
 
 const API_KEY = '6bac6837435b7c3fc2ff3a65520e6013';
-const API_URL = 'https://api.themoviedb.org/3/';
+const API_URL = 'https://restaurent-database.herokuapp.com/addFood';
 
 async function fetch(url = '', config = {}) {
   try {
     const response = await axios.get(url, config);
+    console.log(response.data);
     return response;
   } catch (error) {
     return error;
@@ -13,7 +14,7 @@ async function fetch(url = '', config = {}) {
 }
 
 export function getTrending() {
-  return fetch(`${API_URL}trending/movie/day?api_key=${API_KEY}`);
+  return fetch(`${API_URL}`);
 }
 
 export function searhMovie(searchQuery) {

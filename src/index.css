@@ -130,7 +130,13 @@ a {
 }
 .product {
   background-color: azure;
-  border: 1px solid gray;
+  border: 1px solid #eee;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
 }
 .shops-list {
   display: flex;
